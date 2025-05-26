@@ -1,0 +1,54 @@
+# Microsoft .NET Core ---> came into market-2016. It is free open source also, created for building modern Cloud based Apps. Platform Independent.
+->cross platform development - runs on various OS.
+->Open source software - public collaboration and made freely available.
+->fast development.
+->It is based on MVC(Model View Controller).
+
+
+-----------------------------------------------------*ASP.NET Core*---------------------------------------------------------------------------------------
+->is new version of ASP.NET , an improved one with richer functionality, new libraries.
+->consist of modular components with minimal overhead.
+->latest version is Core 7.0 .
+->It has robust Cloud support, supports modular architecture(separate modules) better than ASP. Net does.
+->web framework.
+->Runs on Dot Net and Dot Net Core framework.
+_>No webforms.
+_>control over no of dependencies.
+appsettings.json -> configuration and settings in this.
+->powerful isolation algorithms.
+
+[ASP.NET, first version in 2002  based on .NET framework platform based on HTTP Protocol for req and communication, only on Windows, support webforms, More dependencies, low level of isolation].
+
+
+---------------------------------------------------------------**MVC**-----------------------------------------------------------------------------------------
+MVC is a design pattern inside ASP and it is used when we design an app.
+->provide SOC(separation of concern),work in separate modules.  
+Three Basic Components:
+1. Model (Business Entities)-> makes different entities in database and represent
+2. View (Presentation Logic)-> UI work is done here
+3. Controller(Business Logic)-> important logic written and act as bridge between model and view and establish communication between them.
+
+->User can only see View not the other two. whenever User sent request, it will go to Controller and if data is in Model then that data is update in VIEW by Controller and then that data will be display to user.
+
+**DIRECTORY STRUCTURE OF MVC:-
+Dependencies-> pre installed libraries and frameworks.
+Properties-> launchsettings.json file, contains setting that control how web app is started on machine. only used within local development machine(pc, laptop). 
+wwwroot-> store static files like image files, bootstrap files, css files.
+
+appsettings.json file->is an app configuration file used to store configure setting such as database connections string etc.
+
+program.cs-> first file to run. Middleware is used here.
+
+--------------**MIDDLEWARE**-------:
+any request done by client passed through middleware then goes to web api and then it respond. It is executed in every request and it controls how ->app responds to HTTP requests.
+->It also control how our app looks when there is an error.
+->authentication and authorization.
+->order of middleware is important.
+app.Run(async (context)-> never call subsequent middleware.
+app.Use(async (context, next) )-> have call next middleware also and can write code after that in same middleware also.
+
+--------------**ROUTING**---------:
+It is a mechanism in which it will inspect the incoming requests and then mapped the request to controllers and their action methods.
+ROUTING = URL + HTTPS Methods.
+Two ways for defining routes:-
+1.Convention based routing-> defining pattern.

@@ -52,3 +52,16 @@ It is a mechanism in which it will inspect the incoming requests and then mapped
 ROUTING = URL + HTTPS Methods.
 Two ways for defining routes:-
 1.Convention based routing-> defining pattern.
+route is determined based on conventions defined in route templates which will map incoming request to controllers and their action methods.
+It is defined in program.cs file.
+"{controller=  }/{action= }/{id?}"
+
+2. Attribute based routing-> [Route] attribute is used to define the routes.
+route is determined based on attribute which are configure either at controller level or at action level.
+changing their names does not require route template to be changed.
+Tokens are [controller] and [action].
+
+Methods:
+1. Map-> work with any get, post, update, delete(same).
+2. MapGet-> work only with get method.
+3. MapPost 4. MapPut 5. MapDelete

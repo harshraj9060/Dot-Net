@@ -65,3 +65,47 @@ Methods:
 1. Map-> work with any get, post, update, delete(same).
 2. MapGet-> work only with get method.
 3. MapPost 4. MapPut 5. MapDelete
+------------------------------**ENTITY FRAMEWORK CORE**------------------------
+->new version after EF6 but it is redesigned.
+->ORM: Object Relational Mapping Framework. to address data access requirements of ASP.NET CORE MVC apps. it is a tool used to store data in relational databases.
+Here, Entity framework core is the framework used in bw objects and database.
+->open-source, lightweight, extensible and cross-platform.
+->a data access technology.
+->automated mechanism.
+
+CLASSES(in apps)---> ORM----> Database.(First approach)
+ORM convert model classes and generate tables in databases.
+
+It supports two development approaches:
+1. Code-First:
+Existing Model class -> Code First -> Generated DB/Tables
+->It allows you to define your own model by creating custom classes.
+->model class + Db Context Class -> Migration --(Run)--> Database tables 
+[----for adding migration -> dotnet ef migrations add InitialCreate]
+[-----uodating database - dotnet ef database update]
+
+*CSRF - form hidden field applied by asp dot net core to prevent from attack.*
+
+2. Database-First:
+
+Existing Database & tables -> DB First -> Generated Model Classes.
+
+**SCAFFOLDING FOR CRUD OPERATIONS-->>
+->Scaffolding in ASP.NET Core is a powerful feature that automatically generates the code for Create, Read, Update, and Delete (CRUD) operations based on your data model. This can save a lot of time and effort when developing applications.
+Steps:
+1.Create a new ASP.NET Core Project
+2.Installed required packages: use NuGet Package Manager Console.
+3.Create Data Model.
+4.Create DB Context-> to manage database connection and entity sets.
+5.Configure DB Connections-> in appsettings.json
+In Program.cs , configure dB Context.
+
+**HTTP VERBS-->>
+HTTP verbs, also known as HTTP methods, define the actions that can be performed on resources in a web application.
+Here are the most commonly used HTTP verbs:
+1.GET-> retrieve data from the server. ex: GET.products
+2.POST: submit data to server to create new resource. ex: creating a new product.
+3.PUT: update a product details.
+4.DELETE: ex: DELETE/products/1
+5.PATCH: apply partial modification to resource.
+

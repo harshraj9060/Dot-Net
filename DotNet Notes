@@ -109,3 +109,25 @@ Here are the most commonly used HTTP verbs:
 4.DELETE: ex: DELETE/products/1
 5.PATCH: apply partial modification to resource.
 
+**DATA ANNOTATION**->Data annotations in ASP.NET are used to define validation rules directly within your model classes.
+Common attributes include:
+[Required]: Ensures that a field is not left empty.
+[StringLength]: Sets the maximum length of a string.
+[Range]: Specifies a range for numeric values.
+[EmailAddress]: Validates that the field contains a valid email address.
+->All attribute should be under namespace -> System.ComponentModel.DataAnnotations
+
+**DATA VALIDATION**->Data validation in ASP.NET can be performed using these annotations. When a user submits a form, the framework automatically checks the data against the defined rules. If the data doesn't meet the criteria, validation errors are generated.
+Example:-
+public class User
+{
+    [Required]
+    public string Name { get; set; }
+
+    [EmailAddress]
+    public string Email { get; set; }
+
+    [Range(18, 100)]
+    public int Age { get; set; }
+}
+
